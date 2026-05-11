@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy:   #1a1a2e;
+    --ink:    #13131a;
+    --cobalt: #2d3561;
+    --gold:   #c9a96e;
+    --gold-d: #8a7355;
+    --cream:  #fffef9;
+    --warm:   #f5f0e8;
+    --border: #e0d8cc;
+    --slate:  #94a3b8;
+    --blue:   #60a5fa;
+    --green:  #4ade80;
+    --red:    #f87171;
+  }
+
+  html { font-size: 16px; }
+
+  ::selection {
+    background: rgba(96, 165, 250, 0.25);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #13131a; }
+  ::-webkit-scrollbar-thumb { background: #2a2a3a; border-radius: 3px; }
+}
+
+@layer components {
+  .label {
+    @apply font-mono text-[10px] tracking-[3px] uppercase text-gold-dark;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl font-bold text-cream leading-tight;
+  }
+
+  .section-sub {
+    @apply font-sans text-lg text-slate leading-relaxed;
+  }
+
+  .card-dark {
+    @apply bg-ink border border-[#2a2a3a] rounded-xl;
+  }
+
+  .card-cream {
+    @apply bg-cream border border-[#e0d8cc] rounded-xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-signal-blue text-white
+           font-mono text-xs tracking-widest uppercase px-6 py-3
+           rounded-lg hover:opacity-90 transition-opacity;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-[#2a2a3a] text-slate
+           font-mono text-xs tracking-widest uppercase px-6 py-3
+           rounded-lg hover:border-signal-blue hover:text-signal-blue transition-colors;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gold text-navy
+           font-mono text-xs tracking-widest uppercase px-6 py-3
+           rounded-lg hover:opacity-90 transition-opacity font-bold;
+  }
+
+  .divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-[#2a2a3a] to-transparent;
+  }
+
+  /* News ticker */
+  .ticker-wrap {
+    @apply overflow-hidden whitespace-nowrap;
+  }
+  .ticker-track {
+    @apply inline-flex gap-12 animate-ticker;
+  }
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold to-signal-blue bg-clip-text text-transparent;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.15);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(201, 169, 110, 0.15);
+  }
+
+  .bg-grid {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cpath d='M40 0v40M0 40h40' stroke='%232a2a3a' stroke-width='0.4'/%3E%3C/svg%3E");
+  }
+}

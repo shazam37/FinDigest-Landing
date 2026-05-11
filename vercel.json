@@ -1,0 +1,12 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "env": {
+    "NEXT_PUBLIC_GITHUB_URL": "https://github.com/YOUR_USERNAME/fintech-agent",
+    "NEXT_PUBLIC_APP_URL": "https://your-app.onrender.com",
+    "NEXT_PUBLIC_CHROME_STORE_URL": "https://chrome.google.com/webstore/detail/fintech-intelligence",
+    "NEXT_PUBLIC_EXTENSION_ZIP_URL": "https://github.com/YOUR_USERNAME/fintech-agent/releases/latest/download/extension.zip"
+  }
+}

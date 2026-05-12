@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { Github, Chrome, Menu, X } from 'lucide-react'
 
-const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/YOUR_USERNAME/fintech-agent'
+const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shazam37/FinDigest.ai'
 const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || '#extension'
 
 export default function Navbar() {

@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Chrome, Github, ArrowDown } from 'lucide-react'
 
-const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/YOUR_USERNAME/fintech-agent'
+const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shazam37/FinDigest.ai'
 const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || '#extension'
 
 // Simulated live stories for the animated email preview
@@ -15,13 +15,17 @@ const STORIES = [
 ]
 
 function EmailPreview() {
-  const [visible, setVisible] = useState(0)
+  const [visible, setVisible] = useState(1)
 
   useEffect(() => {
-    if (visible >= STORIES.length) return
-    const t = setTimeout(() => setVisible(v => v + 1), 600 + visible * 200)
+  if (visible < STORIES.length) {
+    const t = setTimeout(() => {
+      setVisible(v => v + 1)
+    }, 500)
+
     return () => clearTimeout(t)
-  }, [visible])
+  }
+}, [visible])
 
   return (
     <div className="relative w-full max-w-sm mx-auto lg:mx-0">
@@ -48,10 +52,14 @@ function EmailPreview() {
         {/* Stories */}
         <div className="p-5 space-y-3 bg-cream">
           {STORIES.slice(0, visible).map((s, i) => (
+            // <div
+            //   key={s.num}
+            //   className="flex items-start gap-3 border-b border-[#e8e2d9] pb-3 last:border-0 last:pb-0"
+            //   style={{ animation: 'fadeUp 0.4s ease forwards', opacity: 0, animationDelay: `${i * 50}ms`, animationFillMode: 'forwards' }}
+            // >
             <div
               key={s.num}
-              className="flex items-start gap-3 border-b border-[#e8e2d9] pb-3 last:border-0 last:pb-0"
-              style={{ animation: 'fadeUp 0.4s ease forwards', opacity: 0, animationDelay: `${i * 50}ms`, animationFillMode: 'forwards' }}
+              className="flex items-start gap-3 border-b border-[#e8e2d9] pb-3 last:border-0 last:pb-0 animate-fade-up"
             >
               <span className="font-mono text-[10px] font-bold text-gold-dark mt-0.5 flex-shrink-0">{s.num}</span>
               <div className="flex-1 min-w-0">
@@ -129,7 +137,7 @@ export default function Hero() {
                 { value: '$0', label: 'Monthly cost' },
                 { value: '9 AM', label: 'Daily delivery' },
                 { value: '4', label: 'Channels' },
-                // { value: 'MIT', label: 'License' },
+                { value: 'Every 2 hrs', label: 'Breaking news scan' },
               ].map((s) => (
                 <div key={s.label}>
                   <p className="font-serif text-2xl font-bold text-cream">{s.value}</p>

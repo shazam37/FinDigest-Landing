@@ -1,7 +1,7 @@
 'use client'
 import { Github, Star, GitFork, Code2, Zap } from 'lucide-react'
 
-const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/YOUR_USERNAME/fintech-agent'
+const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shazam37/FinDigest.ai'
 
 const STACK = [
   { name: 'FastAPI', desc: 'Async API framework', color: '#009688' },
@@ -32,7 +32,7 @@ export default function OpenSource() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="label mb-4">100% Open Source</p>
+          {/* <p className="label mb-4">100% Open Source</p> */}
           <h2 className="section-title mb-5">
             Built in public.<br />
             <span className="text-gradient">Free forever.</span>
@@ -43,7 +43,7 @@ export default function OpenSource() {
           </p>
 
           <div className="flex justify-center gap-4 mt-8">
-            <a
+            {/* <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -51,7 +51,7 @@ export default function OpenSource() {
             >
               <Github size={16} />
               View on GitHub
-            </a>
+            </a> */}
             <a
               href={`${GITHUB_URL}/fork`}
               target="_blank"

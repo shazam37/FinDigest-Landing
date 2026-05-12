@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { Github, Send, CheckCircle } from 'lucide-react'
 
-const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/YOUR_USERNAME/fintech-agent'
+const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shazam37/FinDigest.ai'
 
 const AREAS = [
   'Additional delivery channels (Discord, Teams)',

@@ -148,7 +148,7 @@ export default function Extension() {
             <div className="flex flex-wrap gap-4">
               <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <Chrome size={16} />
-                Chrome Web Store
+                Chrome Web Store (Soon)
               </a>
               <a href={EXT_ZIP_URL} target="_blank" rel="noopener noreferrer" className="btn-outline">
                 Download .zip

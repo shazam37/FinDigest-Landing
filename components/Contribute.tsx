@@ -222,9 +222,9 @@ export default function Contribute() {
                     {status === 'submitting' ? 'Sending…' : 'Register as Contributor'}
                   </button>
 
-                  <p className="font-mono text-[10px] text-slate text-center mt-4">
+                  {/* <p className="font-mono text-[10px] text-slate text-center mt-4">
                     No spam. We'll only contact you about the project.
-                  </p>
+                  </p> */}
                 </form>
               )}
             </div>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Github, Chrome, Menu, X } from 'lucide-react'
 
 const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shazam37/FinDigest.ai'
-const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || '#extension'
+const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || 'https://github.com/shazam37/FinDigest.ai/releases/download/v1.0.0/findigest-extension.zip'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -67,10 +67,10 @@ export default function Navbar() {
             <Github size={14} />
             GitHub
           </a>
-          <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary py-2 px-4">
+          {/* <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary py-2 px-4">
             <Chrome size={14} />
             Install Extension
-          </a>
+          </a> */}
         </div>
 
         {/* Mobile menu button */}

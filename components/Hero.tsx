@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Chrome, Github, ArrowDown } from 'lucide-react'
 
 const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shazam37/FinDigest.ai'
-const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || '#extension'
+const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || 'https://github.com/shazam37/FinDigest.ai/releases/download/v1.0.0/findigest-extension.zip'
 
 // Simulated live stories for the animated email preview
 const STORIES = [
@@ -122,7 +122,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 mb-10">
               <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm px-7 py-3.5">
-                <Chrome size={16} />
+                {/* <Chrome size={16} /> */}
                 Install Browser Extension
               </a>
               <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="btn-outline text-sm px-7 py-3.5">

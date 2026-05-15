@@ -1,8 +1,8 @@
 'use client'
 import { Github, Chrome, Mail } from 'lucide-react'
 
-const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/YOUR_USERNAME/fintech-agent'
-const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || '#'
+const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shazam37/FinDigest.ai'
+const CHROME_STORE_URL = process.env.NEXT_PUBLIC_CHROME_STORE_URL || 'https://github.com/shazam37/FinDigest.ai/releases/download/v1.0.0/findigest-extension.zip'
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://your-app.onrender.com'
 
 const LINKS = {
@@ -10,8 +10,8 @@ const LINKS = {
     { label: 'Features', href: '#features' },
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Browser Extension', href: '#extension' },
-    { label: 'Live Demo', href: `${APP_URL}/preview` },
-    { label: 'API Docs', href: `${APP_URL}/docs` },
+    // { label: 'Live Demo', href: `${APP_URL}/preview` },
+    // { label: 'API Docs', href: `${APP_URL}/docs` },
   ],
   Developer: [
     { label: 'GitHub Repo', href: GITHUB_URL },
@@ -22,7 +22,7 @@ const LINKS = {
   ],
   Community: [
     { label: 'Contribute', href: '#contribute' },
-    { label: 'Subscribe to Digest', href: `${APP_URL}/subscribe` },
+    // { label: 'Subscribe to Digest', href: `${APP_URL}/subscribe` },
     { label: 'MIT License', href: `${GITHUB_URL}/blob/main/LICENSE` },
     { label: 'Changelog', href: `${GITHUB_URL}/releases` },
   ],

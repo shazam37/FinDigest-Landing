@@ -150,14 +150,14 @@ export default function Extension() {
                 <Chrome size={16} />
                 Chrome Web Store (Soon)
               </a>
-              <a href={EXT_ZIP_URL} target="_blank" rel="noopener noreferrer" className="btn-outline">
+              {/* <a href={EXT_ZIP_URL} target="_blank" rel="noopener noreferrer" className="btn-outline">
                 Download .zip
-              </a>
+              </a> */}
             </div>
 
-            <p className="font-mono text-[10px] text-slate mt-4 tracking-wide">
+            {/* <p className="font-mono text-[10px] text-slate mt-4 tracking-wide">
               Firefox: load the .zip via about:debugging → Load Temporary Add-on
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
